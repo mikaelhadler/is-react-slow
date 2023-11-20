@@ -1,15 +1,12 @@
 import {LitElement, html} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
 
-
-export class MyElement extends LitElement {
-  @property()
-  version = 'STARTING';
-
+export default class MyHeader extends LitElement {
   render() {
     return html`
-    <p>Welcome to the Lit tutorial!</p>
-    <p>This is the ${this.version} code.</p>
+      <div>
+        <h1 style=" color: #325cff;font-size: 3.2em; line-height: 1.1;">Hello, Lit!</h1>
+      </div>
     `;
   }
 }
+customElements.define('lit-app', MyHeader);
